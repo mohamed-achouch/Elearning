@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    
+     <main>
+        <header>
+            <ul class="indicator">
+                <li data-filter="all">all</li>
+                <li data-filter="blazzer">blazzer</li>
+                <li data-filter="watch">watch</li>
+                <li data-filter="shoes">shoes</li>
+                <li data-filter="mobiles">mobiles</li>
+                <li data-filter="accessories">accessories</li>
+            </ul>
+        </header>
+        <div>
+            <ul class="items">
+                <li data-categorie="mobiles">mobiles</li>
+                <li data-categorie="blazzer">blazzer</li>
+                <li data-categorie="watch">watch</li>
+                <li data-categorie="shoes">shoes</li>
+                <li data-categorie="mobiles">mobiles</li>
+                <li data-categorie="accessories">accessories</li>
+                <li data-categorie="shoes">shoes</li>
+                <li data-categorie="accessories">accessories</li>
+                <li data-categorie="shoses">shoses</li>
+                <li data-categorie="blazzer">blazzer</li>
+                <li data-categorie="shoes">shoes</li>
+
+           
+            </ul>
+        </div>
+     </main>
+
+<script type="text/javascript">
+    let indicator = document.querySelector('.indicator').children;
+    let main = document.querySelector('.items').children;
+    for(let i=0 ; i<indicator.length; i++){
+       indicator[i].onclick = function(){
+        for(let x=0; x<indicator.length;x++){
+            indicator[x].classList.remove('active');
+        }
+        this.classList.add('active');
+        const displayItems = this.getAttribute('data-filter');
+        for(let z=0; z<main.length;z++)
+        {
+            main[z].style.transform = 'scale(0)';
+            setTimeout(()=>{
+                main[z].style.display ='none';
+            },2000);
+            if((main[z].getAttribute('data-categorie') == displayItems) || displayItems == 'all'){
+                main[z].style.transform = 'scale(1)';
+            setTimeout(()=>{
+                main[z].style.display ='block';
+            },2000);
+            }
+        }
+       }
+      
+    }
+</script>
+
+</body>
+</html>

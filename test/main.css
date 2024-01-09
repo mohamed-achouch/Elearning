@@ -1,0 +1,27 @@
+header ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+header ul li{
+  
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: aquamarine;
+}
+main div .items{
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+main div .items li{
+    height: 100px;
+    width: 150px;
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

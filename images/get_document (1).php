@@ -1,0 +1,1 @@
+{"timestamp":"2023-01-10T22:26:25.555+0000","status":400,"error":"Bad Request","message":"JSON parse error: Unexpected character (',' (code 44)): expected a value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): expected a value\n at [Source: (PushbackInputStream); line: 2, column: 12]","path":"/Wspipc/getDocument"}
